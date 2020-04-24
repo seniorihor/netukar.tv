@@ -1,4 +1,7 @@
 class GalleryItem < ApplicationRecord
+  validates :plot, presence: true
+  validates :title, presence: true
+
   scope :ordered_by_creation, -> { order('created_at asc') }
   scope :movie_and_seasons, -> { where(type: %i[Movie Season]) }
 

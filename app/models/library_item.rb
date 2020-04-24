@@ -7,6 +7,8 @@ class LibraryItem < ApplicationRecord
   belongs_to :season, foreign_key: 'gallery_item_id', optional: true
   belongs_to :purchase_option
 
+  validates_presence_of :gallery_item_id, message: 'must be provided.'
+
   scope :active_subscriptions, -> { where('expires_at > ?', DateTime.now) }
   scope :ordered_by_expiry, -> { order('expires_at asc') }
 
