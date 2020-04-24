@@ -8,6 +8,9 @@ Rails.application.routes.draw do
       end
       resources :movies_and_seasons, only: :index
       resources :purchases, only: %i[index create]
+      resources :users, only: %i[index create] do
+        resources :libraries, only: :index
+      end
     end
   end
 end
