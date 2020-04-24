@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         resources :episodes, only: %i[index show]
       end
       resources :movies_and_seasons, only: :index
+      resources :purchases, only: %i[index create]
     end
   end
 end
