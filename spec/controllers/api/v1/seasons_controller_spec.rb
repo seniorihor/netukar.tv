@@ -21,7 +21,7 @@ RSpec.describe Api::V1::SeasonsController, type: :controller do
 
     it 'returns the seasons with episodes' do
       get :index
-      expect(JSON.parse(response.body).map(&:keys)[0]).to eq(['id', 'title', 'plot', 'type', 'episodes', 'purchase_options'])
+      expect(JSON.parse(response.body).map(&:keys)[0]).to eq(%w[id title plot type episodes purchase_options])
     end
   end
 end

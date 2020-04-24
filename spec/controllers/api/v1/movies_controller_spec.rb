@@ -21,7 +21,7 @@ RSpec.describe Api::V1::MoviesController, type: :controller do
 
     it 'returns the movies' do
       get :index
-      expect(JSON.parse(response.body).map(&:keys)[0]).to eq(['id', 'title', 'plot', 'type', 'purchase_options'])
+      expect(JSON.parse(response.body).map(&:keys)[0]).to eq(%w[id title plot type purchase_options])
     end
 
   end
