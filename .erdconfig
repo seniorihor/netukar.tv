@@ -1,0 +1,22 @@
+attributes:
+  - content
+  - foreign_key
+  - inheritance
+disconnected: true
+filename: domain_model
+filetype: pdf
+indirect: true
+inheritance: true
+markup: true
+notation: simple
+orientation: horizontal
+polymorphism: true
+sort: true
+warn: true
+title: Netukar.tv
+exclude: null
+only: null
+only_recursion_depth: null
+prepend_primary: false
+cluster: false
+splines: spline
